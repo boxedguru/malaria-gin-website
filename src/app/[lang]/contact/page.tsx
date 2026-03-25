@@ -33,7 +33,7 @@ export default async function ContactPage({ params }: PageProps<'/[lang]/contact
           <p className="text-white/50">{contact.subtitle}</p>
         </div>
 
-        <ContactForm dict={contact} />
+        <ContactForm dict={contact} lang={lang} />
       </div>
     </section>
   )

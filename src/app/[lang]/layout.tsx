@@ -11,22 +11,48 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }))
 }
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://malariagin.com'
+
 export async function generateMetadata({
   params,
 }: LayoutProps<'/[lang]'>): Promise<Metadata> {
   const { lang } = await params
   const isEs = lang === 'es'
+  const description = isEs
+    ? 'Super Premium Gin Argentino. Destilado en rebeldía desde Mar del Plata. Ganador IWSC 2021 y 2023.'
+    : 'Super Premium Argentine Gin. Distilled in defiance from Mar del Plata. IWSC winner 2021 & 2023.'
+
   return {
     title: {
       default: 'Malaria Gin',
       template: '%s — Malaria Gin',
     },
-    description: isEs
-      ? 'Super Premium Gin Argentino. Destilado en rebeldía desde Mar del Plata.'
-      : 'Super Premium Argentine Gin. Distilled in defiance from Mar del Plata.',
+    description,
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        'es-AR': '/es',
+        'en-US': '/en',
+      },
+    },
     openGraph: {
+      type: 'website',
       siteName: 'Malaria Gin',
       locale: isEs ? 'es_AR' : 'en_US',
+      description,
+      images: [
+        {
+          url: '/og-default.jpg', // placeholder — real OG image TBD with assets from MAL-11
+          width: 1200,
+          height: 630,
+          alt: 'Malaria Gin — Super Premium Argentine Gin',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@malaria_gin',
     },
   }
 }

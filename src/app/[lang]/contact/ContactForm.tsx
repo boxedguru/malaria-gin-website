@@ -17,23 +17,45 @@ type ContactDict = {
   successMessage: string
 }
 
-export default function ContactForm({ dict }: { dict: ContactDict }) {
+export default function ContactForm({ dict, lang }: { dict: ContactDict; lang: string }) {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
-    // TODO: wire to /api/contact route (Resend) once env vars are configured
-    await new Promise((r) => setTimeout(r, 600))
-    setSubmitted(true)
-    setLoading(false)
+    setError(null)
+    const form = e.currentTarget
+    const data = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      reason: (form.elements.namedItem('reason') as HTMLSelectElement).value,
+    }
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      if (!res.ok) throw new Error('send_failed')
+      setSubmitted(true)
+    } catch {
+      setError(
+        lang === 'es'
+          ? 'Algo salió mal. Intentá de nuevo.'
+          : 'Something went wrong. Please try again.'
+      )
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
     return (
       <div className="text-center py-16 border border-brand-plum/30">
-        <p className="font-headline text-2xl text-white mb-2">{dict.successMessage}</p>
+        <p className="font-headline text-2xl text-white">{dict.successMessage}</p>
       </div>
     )
   }
@@ -79,6 +101,10 @@ export default function ContactForm({ dict }: { dict: ContactDict }) {
         rows={5}
         className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/30 px-4 py-3 text-sm focus:outline-none focus:border-brand-plum transition-colors resize-none"
       />
+
+      {error && (
+        <p className="text-brand-red text-sm">{error}</p>
+      )}
 
       <button
         type="submit"
