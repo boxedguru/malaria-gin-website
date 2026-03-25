@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "products": "Productos",
+    "story": "Historia",
+    "whereToBuy": "Dónde Encontrarnos",
+    "press": "Prensa",
+    "contact": "Contacto"
+  },
+  "home": {
+    "heroTagline": "Azul en el vaso. Rosa al conocer la tónica.",
+    "heroSubtitle": "Siete flores. Una transformación.",
+    "heroCta": "Conocé los productos",
+    "storyTeaser": "Destilado en rebeldía desde Mar del Plata",
+    "storyCta": "Nuestra historia",
+    "productsTitle": "Nuestros Gins",
+    "awardsTitle": "Reconocimientos"
+  },
+  "products": {
+    "title": "Productos",
+    "subtitle": "Tres expresiones. Un espíritu.",
+    "whereToBuyCta": "Ver dónde encontrarnos"
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "chapter1Title": "1840 — El origen",
+    "chapter2Title": "Mar del Plata — El destilado",
+    "chapter3Title": "El cambio de color"
+  },
+  "whereToBuy": {
+    "title": "Dónde Encontrarnos",
+    "subtitle": "Encontrá Malaria Gin en bares, restaurantes y tiendas seleccionadas de Argentina.",
+    "comingSoon": "La lista completa estará disponible próximamente. Contactanos para distribución."
+  },
+  "press": {
+    "title": "Prensa",
+    "awardsTitle": "Premios y Reconocimientos",
+    "downloadKit": "Descargar Press Kit",
+    "contactTitle": "Contacto de Prensa",
+    "contactCta": "prensa@malariagin.com"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Preguntas sobre distribución, eventos o prensa? Escribinos.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Tu email",
+    "messagePlaceholder": "Tu mensaje",
+    "reasonLabel": "Motivo",
+    "reasonOptions": {
+      "general": "Consulta general",
+      "trade": "Distribución / Trade",
+      "press": "Prensa",
+      "events": "Eventos"
+    },
+    "submit": "Enviar",
+    "successMessage": "¡Gracias! Te respondemos a la brevedad."
+  },
+  "footer": {
+    "tagline": "Destilado en rebeldía.",
+    "legal": "© 2026 Malaria Gin — Raven Clan Distillery, Mar del Plata, Argentina.",
+    "drinkResponsibly": "Beber con moderación. Prohibida la venta a menores de 18 años."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "products": "Products",
+    "story": "Story",
+    "whereToBuy": "Where to Buy",
+    "press": "Press",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTagline": "Blue in the glass. Pink with tonic.",
+    "heroSubtitle": "Seven flowers. One transformation.",
+    "heroCta": "Explore our gins",
+    "storyTeaser": "Distilled in defiance. Born in Mar del Plata.",
+    "storyCta": "Our story",
+    "productsTitle": "Our Gins",
+    "awardsTitle": "Awards & Recognition"
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Three expressions. One spirit.",
+    "whereToBuyCta": "Find us near you"
+  },
+  "story": {
+    "title": "Our Story",
+    "chapter1Title": "1840 — The Origin",
+    "chapter2Title": "Mar del Plata — The Distillery",
+    "chapter3Title": "The Colour Change"
+  },
+  "whereToBuy": {
+    "title": "Where to Buy",
+    "subtitle": "Find Malaria Gin at select bars, restaurants, and retailers across Argentina.",
+    "comingSoon": "Full list coming soon. Contact us for distribution inquiries."
+  },
+  "press": {
+    "title": "Press",
+    "awardsTitle": "Awards & Recognition",
+    "downloadKit": "Download Press Kit",
+    "contactTitle": "Press Contact",
+    "contactCta": "press@malariagin.com"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Questions about distribution, events, or press? Get in touch.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "reasonLabel": "Reason",
+    "reasonOptions": {
+      "general": "General enquiry",
+      "trade": "Distribution / Trade",
+      "press": "Press",
+      "events": "Events"
+    },
+    "submit": "Send",
+    "successMessage": "Thank you! We'll be in touch shortly."
+  },
+  "footer": {
+    "tagline": "Distilled in defiance.",
+    "legal": "© 2026 Malaria Gin — Raven Clan Distillery, Mar del Plata, Argentina.",
+    "drinkResponsibly": "Drink responsibly. Not for sale to persons under 18."
+  }
+}
